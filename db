@@ -1,0 +1,35 @@
+1.
+    - User
+    - Email
+
+2.
+    - User <-> Email | One-to-Many
+
+3.
+    - User
+        login (string) (unique)
+        password (string)
+        email_address (string) (unique)
+        salt (string)
+        token (string)
+        id_role (int)
+        firstname (string)
+        lastname (string)
+        is_deleted (bool)
+        date_birth (datetime)
+        date_created (datetime)
+        date_updated (datetime)
+
+    - Role
+        title (string)
+
+    - Email
+        title (string)
+        body (text) 
+        receiver_id (int)
+        id_sender (int)
+        id_status (int)
+        date_created (datetime)
+
+    - EmailStatus
+        title (string)

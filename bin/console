@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+define('PATH', dirname(__DIR__));
+defined('APP_ENV') or define('APP_ENV', 'prod');
+
+require PATH . '/vendor/autoload.php';
+$config = require PATH . '/config/env/' . APP_ENV . '/config.php';
+$app = new \Scutum\Applications\ConsoleApplication($config);
+
+$app->runCli();
